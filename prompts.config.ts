@@ -1,7 +1,7 @@
 import { defineConfig } from "@/lib/config";
 
 // Set to true to use clone branding (hide prompts.chat repo branding)
-const useCloneBranding = false;
+const useCloneBranding = true;
 
 export default defineConfig({
   // Branding - customize for white-label
@@ -35,15 +35,15 @@ export default defineConfig({
   auth: {
     // Available: "credentials" | "google" | "azure" | "github" | "apple" | "oidc" | "oauth" | custom
     // Use `providers` array to enable multiple auth providers
-    providers: ["github", "google", "apple"],
+    providers: ["credentials"],
     // Allow public registration (only applies to credentials provider)
-    allowRegistration: false,
+    allowRegistration: true,
   },
 
   // Internationalization
   i18n: {
     locales: ["en", "tr", "es", "zh", "ja", "ar", "pt", "fr", "it", "de", "nl", "ko", "ru", "he", "el", "az", "fa"],
-    defaultLocale: "en",
+    defaultLocale: "ko",
   },
 
   // Features
